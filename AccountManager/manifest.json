@@ -10,7 +10,7 @@
   "icon": "data/icon/icon.webp",
   "preview_image": null,
   "license": "MIT",
-  "license_url": null,
+  "license_url": "https://github.com/Advanced-Web-Tools/Account-Manager/blob/main/LICENSE",
   "dependencies": [
     {
       "name": "Dashboard",
