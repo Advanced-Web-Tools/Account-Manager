@@ -1,0 +1,43 @@
+#accounts-app [hidden] { display: none !important; }
+.account-panel { padding: var(--space-4); }
+.account-heading { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+.account-heading h2 { margin-bottom: 0; }
+.account-heading > div { min-width: 0; overflow-wrap: anywhere; }
+.account-avatar { width: 88px; height: 88px; flex-shrink: 0; border-radius: 50%; background: var(--surface-secondary); color: var(--muted); display: grid; place-items: center; overflow: hidden; font-size: 2rem; }
+.account-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.account-actions { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-block: var(--space-3); }
+.profile-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin-block: var(--space-3); }
+.profile-fields dt { color: var(--muted); font-size: var(--small-size); }
+.profile-fields dd { margin: 4px 0 0; overflow-wrap: anywhere; }
+.accounts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr)); gap: var(--space-3); }
+.account-card { padding: var(--space-3); align-items: start; overflow-wrap: anywhere; }
+.account-card .account-avatar { margin-bottom: var(--space-2); }
+.account-dialog { width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--text); background: var(--surface); box-shadow: var(--shadow-lg); }
+.account-dialog::backdrop { background: var(--overlay-bg); }
+.account-dialog .account-heading { justify-content: space-between; }
+.account-dialog .form-field { margin-bottom: var(--space-2); }
+.account-dialog .account-actions { margin-bottom: 0; }
+@media (max-width: 575px) { .profile-fields { grid-template-columns: 1fr; } .account-panel { padding: var(--space-3); } .account-heading { flex-wrap: wrap; } }
+.picture-picker { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); border: 1px dashed var(--input-border); border-radius: var(--radius-lg); background: var(--surface-secondary); margin-bottom: var(--space-1); }
+.picture-picker-preview { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; flex-shrink: 0; background: var(--surface); }
+.picture-picker-content { min-width: 0; }
+.picture-picker-name { display: block; font-size: var(--small-size); overflow-wrap: anywhere; margin-bottom: var(--space-1); }
+.picture-picker-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1); }
+.picture-picker-button { position: relative; display: inline-flex; }
+.picture-picker-button label { margin: 0; cursor: pointer; }
+.picture-picker-input { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+.picture-picker-button:focus-within label { outline: 2px solid var(--accent); outline-offset: 3px; }
+.account-list-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-3); }
+.account-list-heading p { margin-bottom: 0; }
+#accounts-app .btn-outline-danger { color: var(--danger); border-color: var(--danger); background: transparent; }
+#accounts-app .btn-outline-danger:hover { background: var(--danger-soft); }
+
+/* Match SettingsManager and ThemeEngine help topics with shared Dashboard tokens. */
+.accounts-help-page .accounts-help-panel { width: 100%; max-width: none; }
+.accounts-help-section { min-width: 0; }
+.accounts-help-section details { border-top: 1px solid var(--border); padding-block: 16px; }
+.accounts-help-section summary { cursor: pointer; font-weight: 600; color: var(--text); }
+.accounts-help-section summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius-sm); }
+.accounts-help-answer { padding-top: 12px; overflow-wrap: anywhere; }
+.accounts-help-answer p { margin-top: 0; }
+.accounts-help-answer pre { max-width: 100%; overflow-x: auto; }
